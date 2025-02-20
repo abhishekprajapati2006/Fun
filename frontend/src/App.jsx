@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Toaster from "react-hot-toast"
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Feed from './components/Feed';
+import Browse from './components/Browse';
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -13,8 +13,8 @@ const App = () => {
       element: <Home />,
       children: [
         {
-          path: '/',
-          element: <Feed />,
+          path: '/browse',
+          element: <Browse />,
         },
         {
           path: '/profile/:id',
